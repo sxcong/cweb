@@ -65,6 +65,7 @@ using namespace std;
 
 #include "IRESTful.h"
 #include "CDBMgr.h"
+#include "redisclient.h"
 
 
 static char *
@@ -520,7 +521,7 @@ main(int argc, char **argv)
 	CDBMgr::Instance().open();
 
 	string test = "test";
-#if 1
+#if 0
 	//写入测试数据
 	int t = time(NULL);
 	CDBMgr::Instance().addAlarmRecord(1, t, (const unsigned char*)test.c_str(), test.size());
@@ -528,6 +529,14 @@ main(int argc, char **argv)
 	int count = 0;
 	map<int, string> mapOut;
 	count = CDBMgr::Instance().getAlarmRecord(1, 0, t + 100, mapOut);
+#endif
+
+#if 1
+	RedisClient::Instance().connect();
+	RedisClient::Instance().setString("1", "test1");
+	string value;
+	RedisClient::Instance().getString("1", value);
+	RedisClient::Instance().disconnect();
 #endif
 
 	CDBMgr::Instance().close();
