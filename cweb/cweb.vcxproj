@@ -159,6 +159,8 @@
     <ClInclude Include="CDBMgr.h" />
     <ClInclude Include="IRESTful.h" />
     <ClInclude Include="JsonUtils.h" />
+    <ClInclude Include="MQTTAsyncClient.h" />
+    <ClInclude Include="mqttmgr.h" />
     <ClInclude Include="redisclient.h" />
   </ItemGroup>
   <ItemGroup>
@@ -166,6 +168,8 @@
     <ClCompile Include="http-server.cpp" />
     <ClCompile Include="IRESTful.cpp" />
     <ClCompile Include="JsonUtils.cpp" />
+    <ClCompile Include="MQTTAsyncClient.cpp" />
+    <ClCompile Include="mqttmgr.cpp" />
     <ClCompile Include="redisclient.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
