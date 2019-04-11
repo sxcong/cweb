@@ -159,12 +159,14 @@
     <ClInclude Include="CDBMgr.h" />
     <ClInclude Include="IRESTful.h" />
     <ClInclude Include="JsonUtils.h" />
+    <ClInclude Include="redisclient.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CDBMgr.cpp" />
     <ClCompile Include="http-server.cpp" />
     <ClCompile Include="IRESTful.cpp" />
     <ClCompile Include="JsonUtils.cpp" />
+    <ClCompile Include="redisclient.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
